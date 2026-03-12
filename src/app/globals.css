@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* AU Brand colours */
+  --navy:   #1E3A5F;
+  --amber:  #F4A261;
+  --green:  #2E7D32;
+  --ink:    #1A1A2E;
+  --slate:  #F8F9FA;
+  --warm:   #F8F4EF;
+  --card:   #FFFFFF;
+  --border: #E5E7EB;
+  --text:   #1F2937;
+  --muted:  #6B7280;
+  --light:  #9CA3AF;
+
+  /* ─── Responsive spacing tokens ─────────────────────────── */
+  --px-page:    1rem;
+  --py-section: 4rem;
+  --gap-section: 2rem;
+  --gap-content: 1.25rem;
+
+  /* Fluid type scale */
+  --text-display: clamp(1.75rem, 4vw,   4rem);
+  --text-h2:      clamp(1.5rem,  3vw,   3.2rem);
+  --text-body:    clamp(0.875rem, 1.1vw, 1.125rem);
+  --text-small:   clamp(0.75rem,  0.9vw, 1rem);
+  --text-label:   clamp(0.7rem,   0.8vw, 0.875rem);
+}
+
+@media (min-width: 640px) {
+  :root { --px-page: 2rem; --py-section: 5rem; --gap-section: 2.5rem; }
+}
+@media (min-width: 768px) {
+  :root { --px-page: 3rem; --py-section: 6rem; --gap-section: 3rem; --gap-content: 1.5rem; }
+}
+@media (min-width: 1024px) {
+  :root { --px-page: 3.5rem; --py-section: 6rem; --gap-section: 3.5rem; --gap-content: 1.5rem; }
+}
+@media (min-width: 1280px) {
+  :root { --px-page: 4rem; --py-section: 7rem; --gap-section: 4rem; }
+}
+@media (min-width: 1536px) {
+  :root { --px-page: 5rem; --py-section: 8rem; --gap-section: 5rem; }
+}
+@media (min-width: 1920px) {
+  :root { --px-page: 8rem; --py-section: 9rem; --gap-section: 5rem; }
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--slate);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* Reveal animation for scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mic pulse ring — AU amber */
+.mic-ring {
+  box-shadow: 0 0 0 8px rgba(244,162,97,0.25), 0 0 0 16px rgba(244,162,97,0.08);
+  animation: micPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes micPulse {
+  0%, 100% { box-shadow: 0 0 0 8px rgba(244,162,97,0.25), 0 0 0 16px rgba(244,162,97,0.08); }
+  50%       { box-shadow: 0 0 0 14px rgba(244,162,97,0.12), 0 0 0 26px rgba(244,162,97,0.03); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes countdown {
+  from { width: 100%; }
+  to   { width: 0%; }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-fade-up         { animation: fadeUp 0.8s ease both; }
+.animate-fade-up-delay-1 { animation: fadeUp 0.8s 0.1s ease both; }
+.animate-fade-up-delay-2 { animation: fadeUp 0.8s 0.2s ease both; }
+.animate-fade-up-delay-3 { animation: fadeUp 0.8s 0.3s ease both; }
+.animate-fade-up-delay-4 { animation: fadeUp 0.8s 0.4s ease both; }
+.animate-blink           { animation: blink 1s infinite; }
+.animate-countdown       { animation: countdown 5s linear; }
+
+/* ─── Layout utility classes ──────────────────────────────── */
+.section-pad {
+  padding-left:  var(--px-page);
+  padding-right: var(--px-page);
+  padding-top:   var(--py-section);
+  padding-bottom: var(--py-section);
+}
+
+.px-page {
+  padding-left:  var(--px-page);
+  padding-right: var(--px-page);
+}
+
+.gap-section { gap: var(--gap-section); }
+.gap-content  { gap: var(--gap-content); }
+
+.gap-grid { gap: 1.25rem; }
+@media (min-width: 768px) {
+  .gap-grid { gap: var(--gap-section); }
+}
