@@ -25,3 +25,6 @@ Thumbs.db
 # internal notes — never commit (public repo)
 Agents.md
 Decisions*.md
+
+# release tarballs
+*.tar.gz
