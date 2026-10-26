@@ -62,7 +62,7 @@ export default function Hero() {
         <p className="text-white/80 text-[clamp(0.9rem,1.1vw,1.2rem)] leading-relaxed max-w-xl mb-8 font-light
                       animate-fade-up-delay-2">
           TalkPOS is the till for cafés and takeaways that also runs the back office:{' '}
-          <strong className="text-white font-semibold">orders to the kitchen, stock, staff PINs, and your sales and
+          <strong className="text-white font-semibold">orders to the kitchen, stock, and your sales and
           expenses with their GST</strong>, in one place. Rosters, payroll and Xero and MYOB import/export are coming.
         </p>
 

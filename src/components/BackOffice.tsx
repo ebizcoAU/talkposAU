@@ -1,7 +1,7 @@
 // src/components/BackOffice.tsx — the mini-ERP story: what runs today, what's coming
 import { now, coming } from '@/content'
 
-const today = ['The till', 'Stock', 'Staff PINs', 'Books in one place']
+const today = ['The till', 'Stock', 'Venue PIN', 'Books in one place']
 
 export default function BackOffice() {
   const nowItems = now.filter((i) => today.includes(i.title))
@@ -20,7 +20,7 @@ export default function BackOffice() {
             <span className="text-[#1E3A5F]">not just the counter.</span>
           </h2>
           <p className="text-[#4B5563] font-light mt-4 leading-relaxed">
-            Sales, stock, staff and books share one set of figures, so you’re not copying numbers
+            Sales, stock and books share one set of figures, so you’re not copying numbers
             between apps. More of the back office is on the way.
           </p>
         </div>

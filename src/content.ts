@@ -25,7 +25,7 @@ export const now: Item[] = [
   { icon: '🙋', title: 'Self-order kiosk', body: 'Customers can order for themselves on a tablet at the counter.' },
   { icon: '📱', title: 'Waiter tablet', body: 'Take orders at the table, with a view of your whole floor.' },
   { icon: '📦', title: 'Stock', body: 'Track stock, from raw materials to finished items, with stock counts and stock-in.' },
-  { icon: '🔐', title: 'Staff PINs', body: 'Staff sign in with a PIN on shared devices.' },
+  { icon: '🔐', title: 'Venue PIN', body: 'A venue PIN locks the till on shared devices.' },
   { icon: '📒', title: 'Books in one place', body: books },
   { icon: '📶', title: 'Your devices, working together', body: 'Phones and tablets on your shop Wi-Fi pair with a QR code. Give each one a job: register, waiter, kiosk or kitchen.' },
 ]

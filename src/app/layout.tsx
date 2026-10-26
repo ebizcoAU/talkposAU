@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://talkpos.com.au'),
   title: 'TalkPOS Australia — till, kitchen, stock and books in one app',
   description:
-    'TalkPOS is the till for cafés and takeaways: orders straight to the kitchen, stock, staff PINs, and your sales and expenses with their GST in one place. Rosters, payroll and Xero and MYOB import/export are coming.',
+    'TalkPOS is the till for cafés and takeaways: orders straight to the kitchen, stock, and your sales and expenses with their GST in one place. Rosters, payroll and Xero and MYOB import/export are coming.',
   keywords: [
     'pos australia', 'cafe pos', 'takeaway pos', 'kitchen display',
     'self-order kiosk', 'restaurant stock', 'hospitality software',

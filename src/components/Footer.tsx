@@ -37,7 +37,7 @@ export default function Footer() {
             Talk<span className="text-[#1E3A5F]">POS</span>
           </div>
           <p className="text-[0.8rem] text-[#4B5563] leading-relaxed max-w-[240px] font-light mb-4">
-            The till for cafés and takeaways, with stock, staff and books in the same app.
+            The till for cafés and takeaways, with stock and books in the same app.
           </p>
           <div className="space-y-1.5">
             <a href="mailto:admin@ebizco.com.au"
