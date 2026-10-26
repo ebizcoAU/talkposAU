@@ -6,7 +6,7 @@ export default function PageShell({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navbar />
-      <main className="pt-20 min-h-screen bg-[#0D0D0D] text-[#F5F0E8]">
+      <main className="pt-20 min-h-screen bg-[#F8F9FA] text-[#1F2937]">
         {children}
       </main>
       <Footer />

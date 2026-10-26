@@ -5,29 +5,24 @@ const cols = [
   {
     title: 'Product',
     links: [
-      { label: 'Features',        href: '#features'    },
-      { label: 'Pricing',         href: '#pricing'     },
-      { label: 'Templates',       href: '#templates'   },
-      { label: 'ATO Compliance',  href: '#compliance'  },
-      { label: 'Blog',            href: '/blog'        },
+      { label: 'How It Works', href: '/#how-it-works' },
+      { label: 'Features',     href: '/#features'     },
+      { label: 'Back Office',  href: '/#back-office'  },
+      { label: 'Pricing',      href: '/#pricing'      },
     ],
   },
   {
     title: 'Support',
     links: [
-      { label: 'Help Centre',      href: '/help'           },
-      { label: 'Video Guides',     href: '/video-guides'   },
-      { label: 'System Status',    href: '/status'         },
-      { label: 'Contact Us',       href: '/contact'        },
+      { label: 'Help',       href: '/help/'    },
+      { label: 'Contact Us', href: '/contact/' },
     ],
   },
   {
     title: 'Legal',
     links: [
-      { label: 'Privacy Policy',       href: '/privacy'    },
-      { label: 'Terms of Service',     href: '/terms'      },
-      { label: 'Compliance Statement', href: '/compliance' },
-      { label: 'ABN: 44 091 466 858',  href: '#'           },
+      { label: 'Privacy Policy',   href: '/privacy/' },
+      { label: 'Terms of Service', href: '/terms/'   },
     ],
   },
 ]
@@ -42,32 +37,13 @@ export default function Footer() {
             Talk<span className="text-[#1E3A5F]">POS</span>
           </div>
           <p className="text-[0.8rem] text-[#4B5563] leading-relaxed max-w-[240px] font-light mb-4">
-            Run your hospitality business smarter. QR ordering, voice takeaway, and ATO-ready
-            compliance — from $39/month.
+            The till for cafés and takeaways, with stock, staff and books in the same app.
           </p>
           <div className="space-y-1.5">
             <a href="mailto:admin@ebizco.com.au"
               className="flex items-center gap-2 text-[0.75rem] text-[#4B5563] hover:text-[#1E3A5F] transition-colors">
               ✉️ admin@ebizco.com.au
             </a>
-            <a href="tel:+61412783123"
-              className="flex items-center gap-2 text-[0.75rem] text-[#4B5563] hover:text-[#1E3A5F] transition-colors">
-              📞 +61 412 783 123
-            </a>
-            <a href="https://wa.me/61412783123?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20TalkPOS" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[0.75rem] text-[#4B5563] hover:text-[#25D366] transition-colors">
-              💬 WhatsApp: +61 412 783 123
-            </a>
-          </div>
-          {/* Social links */}
-          <div className="flex gap-3 mt-4">
-            {['LinkedIn', 'Facebook', 'Instagram'].map((s) => (
-              <a key={s} href="#"
-                className="text-[0.7rem] text-[#4B5563] hover:text-[#1E3A5F]
-                           border border-[#E5E7EB] px-2.5 py-1 rounded-lg transition-colors">
-                {s}
-              </a>
-            ))}
           </div>
         </div>
 
@@ -101,7 +77,7 @@ export default function Footer() {
           </a>{' '}
           (ABN 44 091 466 858). All rights reserved.
         </span>
-        <span>Made with ❤️ for Australian small business 🇦🇺</span>
+        <span>Made for Australian small business 🇦🇺</span>
       </div>
     </footer>
   )

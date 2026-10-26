@@ -1,11 +1,13 @@
 // src/components/Hero.tsx — AU version
 import Link from 'next/link'
+import { PILOT_MAILTO, pilot } from '@/content'
 
+// Facts only: no savings figures, prices or setup-time promises.
 const stats = [
-  { num: '$4,000', suffix: '/mo', label: 'Replaced by TalkPOS' },
-  { num: '6',      suffix: ' apps', label: 'Replaced by one' },
-  { num: '$39',    suffix: '/mo',   label: 'Starting price' },
-  { num: '1',      suffix: ' day',  label: 'Setup time' },
+  { num: '1',       suffix: ' app',      label: 'Till, kitchen, stock and books' },
+  { num: '4',       suffix: ' jobs',     label: 'Register, waiter, kiosk, kitchen' },
+  { num: 'Android', suffix: ' + iOS',    label: 'Phones and tablets you already have' },
+  { num: 'Canberra', suffix: '',         label: 'Pilot starting now' },
 ]
 
 export default function Hero() {
@@ -52,30 +54,29 @@ export default function Hero() {
 
         <h1 className="font-display font-black text-[clamp(1.75rem,3.5vw,4.5rem)] leading-[1.1]
                        tracking-tight mb-5 text-white animate-fade-up-delay-1">
-          Replace{' '}
-          <span className="text-[#F4A261]">$4,000/month</span>
+          Your till, kitchen{' '}
           <br />
-          of tools and staff.{' '}
+          and books.{' '}
           <span className="text-[#F4A261]">One app.</span>
         </h1>
 
         <p className="text-white/80 text-[clamp(0.9rem,1.1vw,1.2rem)] leading-relaxed max-w-xl mb-8 font-light
                       animate-fade-up-delay-2">
-          TalkPOS combines{' '}
-          <strong className="text-white font-semibold">AI front desk, sales, accounting, tax, payroll and inventory</strong>{' '}
-          — voice-first, all in one app. Built for Australian small business.
+          TalkPOS is the till for cafés and takeaways that also runs the back office:{' '}
+          <strong className="text-white font-semibold">orders to the kitchen, stock, staff PINs, and your sales and
+          expenses with their GST</strong>, in one place. Rosters, payroll and Xero and MYOB import/export are coming.
         </p>
 
-        {/* ── Row 1: Free Trial + See how it works ── */}
-        <div className="flex flex-wrap gap-3 mb-3 animate-fade-up-delay-3">
-          <Link
-            href="#pricing"
+        {/* ── Row 1: Pilot + See how it works ── */}
+        <div className="flex flex-wrap gap-3 mb-5 animate-fade-up-delay-3">
+          <a
+            href={PILOT_MAILTO}
             className="inline-flex items-center gap-2 bg-[#F4A261] text-[#1A1A2E] font-bold
                        px-6 py-3 rounded-xl hover:-translate-y-0.5
                        hover:shadow-[0_12px_36px_rgba(244,162,97,0.4)] transition-all"
           >
-            🎉 Free Trial — 3 Months
-          </Link>
+            {pilot.button}
+          </a>
           <Link
             href="#how-it-works"
             className="inline-flex items-center gap-2 text-white font-semibold
@@ -86,44 +87,12 @@ export default function Hero() {
           </Link>
         </div>
 
-        {/* ── Row 2: Download buttons ── */}
-        <div className="flex flex-wrap gap-3 mb-5 animate-fade-up-delay-4">
-          <a
-            href="https://play.google.com/store/apps/details?id=au.talkpos.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-[#2E7D32] hover:bg-[#256427]
-                       text-white px-5 py-3 rounded-xl transition-all
-                       hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(46,125,50,0.4)]"
-          >
-            <span className="text-xl">🤖</span>
-            <div className="text-left leading-tight">
-              <div className="text-[0.6rem] font-semibold uppercase tracking-wider opacity-80">Google Play</div>
-              <div className="text-[0.95rem] font-bold">Download Android</div>
-            </div>
-          </a>
-          <a
-            href="https://apps.apple.com/au/app/talkpos/id0000000000"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white/10 hover:bg-white/20
-                       border border-white/30 hover:border-white/60
-                       text-white px-5 py-3 rounded-xl transition-all hover:-translate-y-0.5"
-          >
-            <span className="text-xl">🍎</span>
-            <div className="text-left leading-tight">
-              <div className="text-[0.6rem] font-semibold uppercase tracking-wider opacity-80">App Store</div>
-              <div className="text-[0.95rem] font-bold">Download iPhone</div>
-            </div>
-          </a>
-        </div>
-
-        {/* ── Row 3: Trust badges ── */}
-        <div className="flex flex-col gap-2">
+        {/* ── Row 2: Plain facts ── */}
+        <div className="flex flex-col gap-2 animate-fade-up-delay-4">
           {[
-            'No lock-in contracts — cancel anytime',
-            'ATO-ready: GST, BAS, STP payroll built in',
-            'Set up in one day — we configure everything',
+            'Customers pay with your own card terminal or cash, straight to you',
+            'Runs on Android phones and tablets, iPhone and iPad',
+            'Your books stay up to date as you sell',
           ].map((b) => (
             <div key={b} className="flex items-center gap-2 text-sm text-white/75 font-medium">
               <span className="w-2 h-2 bg-[#2E7D32] rounded-full flex-shrink-0" />

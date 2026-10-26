@@ -1,167 +1,90 @@
 // src/app/help/page.tsx
 import PageShell from '@/components/PageShell'
 import type { Metadata } from 'next'
+import { CONTACT_EMAIL, books, faq } from '@/content'
 
 export const metadata: Metadata = {
-  title: 'Help Centre — TalkPOS Australia',
-  description: 'Find answers to common questions about TalkPOS Australia.',
+  title: 'Help — TalkPOS Australia',
+  description: 'How to set up TalkPOS, and answers to common questions.',
 }
 
-const categories = [
-  {
-    icon: '🚀',
-    title: 'Getting Started',
-    color: '#1E3A5F',
-    bg: 'bg-[#EFF6FF]',
-    articles: [
-      'How to set up your first menu',
-      'Connecting your QR ordering system',
-      'Setting up PayID payments',
-      'Adding your first staff member',
-    ],
-  },
-  {
-    icon: '📱',
-    title: 'QR Ordering',
-    color: '#F4A261',
-    bg: 'bg-[#FFF7ED]',
-    articles: [
-      'Generating and printing QR codes',
-      'Customising your customer ordering page',
-      'Managing table numbers',
-      'Handling order modifications',
-    ],
-  },
-  {
-    icon: '🎙️',
-    title: 'Voice Ordering',
-    color: '#2E7D32',
-    bg: 'bg-[#F0FDF4]',
-    articles: [
-      'Setting up voice ordering on your phone',
-      'Supported accents and dialects',
-      'Training the system to your menu items',
-      'Troubleshooting voice recognition',
-    ],
-  },
-  {
-    icon: '💳',
-    title: 'Payments',
-    color: '#7C3AED',
-    bg: 'bg-[#F5F3FF]',
-    articles: [
-      'Accepting PayID payments',
-      'Connecting Stripe or Tyro',
-      'Processing refunds',
-      'End-of-day reconciliation',
-    ],
-  },
-  {
-    icon: '📊',
-    title: 'ATO Compliance',
-    color: '#DC2626',
-    bg: 'bg-[#FEF2F2]',
-    articles: [
-      'Understanding your audit trail',
-      'Generating GST reports',
-      'Single Touch Payroll (STP) setup',
-      'Exporting data for your accountant',
-    ],
-  },
-  {
-    icon: '📶',
-    title: 'Offline & Hardware',
-    color: '#0891B2',
-    bg: 'bg-[#ECFEFF]',
-    articles: [
-      'How offline mode works',
-      'Recommended Android hardware',
-      'Setting up your kitchen display',
-      'Edge server installation',
-    ],
-  },
+const setup = [
+  { icon: '🍽️', title: 'Add your menu',     body: 'Type each dish and its price once, and choose which kitchen screen it goes to.' },
+  { icon: '👥', title: 'Add your staff',    body: 'Give each person a staff code and PIN, so everyone signs in as themselves.' },
+  { icon: '📶', title: 'Pair your devices', body: 'On your shop Wi-Fi, scan the QR code to add a phone or tablet, then give it a job: register, waiter, kiosk or kitchen screen.' },
+  { icon: '🧾', title: 'Start selling',     body: books },
 ]
 
 export default function HelpPage() {
   return (
     <PageShell>
-      <div className="max-w-[1100px] mx-auto px-5 py-16">
+      <div className="max-w-[1000px] mx-auto px-5 py-16">
 
         {/* Header */}
         <div className="text-center max-w-[560px] mx-auto mb-12">
-          <p className="text-xs font-bold tracking-[0.13em] uppercase text-[#F4A261] mb-3">
-            Help Centre
-          </p>
+          <p className="text-xs font-bold tracking-[0.13em] uppercase text-[#F4A261] mb-3">Help</p>
           <h1 className="font-display font-black text-[clamp(1.8rem,3.5vw,2.9rem)] tracking-tight
                          leading-tight text-[#1F2937] mb-4">
             How can we help?
           </h1>
           <p className="text-[#4B5563] font-light leading-relaxed">
-            Browse articles below or contact our support team directly.
+            How to get set up, and answers to the questions people ask most.
           </p>
         </div>
 
-        {/* Search bar */}
-        <div className="max-w-[520px] mx-auto mb-14">
-          <div className="flex items-center gap-3 bg-white border border-[#E5E7EB] rounded-xl px-4 py-3
-                          focus-within:border-[#1E3A5F] transition-colors shadow-sm">
-            <span className="text-[#9CA3AF]">🔍</span>
-            <input
-              type="text"
-              placeholder="Search help articles…"
-              className="flex-1 outline-none text-sm text-[#1F2937] placeholder:text-[#9CA3AF] bg-transparent"
-            />
-          </div>
+        {/* Getting set up */}
+        <h2 className="font-display font-bold text-xl text-[#1F2937] mb-5">Getting set up</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
+          {setup.map((s, i) => (
+            <div key={s.title} className="bg-white border border-[#E5E7EB] rounded-2xl p-6">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-2xl">{s.icon}</span>
+                <span className="text-[0.65rem] font-black tracking-[0.2em] text-[#4B5563]">0{i + 1}</span>
+              </div>
+              <div className="font-display font-bold text-[#1F2937] mb-1">{s.title}</div>
+              <p className="text-[0.85rem] text-[#4B5563] leading-relaxed font-light">{s.body}</p>
+            </div>
+          ))}
         </div>
 
-        {/* Categories */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {categories.map((cat) => (
-            <div key={cat.title}
-              className={`${cat.bg} rounded-2xl p-6 border border-transparent
-                          hover:border-[#E5E7EB] hover:-translate-y-1
-                          hover:shadow-[0_12px_32px_rgba(30,58,95,0.08)]
-                          transition-all duration-200`}>
-              <div className="text-2xl mb-3">{cat.icon}</div>
-              <div className="font-display font-bold text-[#1F2937] text-base mb-4"
-                   style={{ color: cat.color }}>
-                {cat.title}
-              </div>
-              <ul className="space-y-2.5">
-                {cat.articles.map((a) => (
-                  <li key={a}>
-                    <a href="#"
-                      className="text-[0.82rem] text-[#4B5563] hover:text-[#1E3A5F]
-                                 transition-colors flex items-center gap-2">
-                      <span className="text-[#D1D5DB]">→</span> {a}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        {/* iPad note */}
+        <div className="bg-[#EFF6FF] border border-[#1E3A5F]/15 rounded-2xl p-6 mb-14">
+          <div className="font-display font-bold text-[#1E3A5F] mb-2">Using an iPad as your register?</div>
+          <p className="text-[0.85rem] text-[#4B5563] leading-relaxed">
+            Keep TalkPOS open on the screen. An iPad pauses apps that are in the background, and your kitchen
+            screens, waiter phones and kiosk then lose touch with the register. Don’t switch to another app for
+            long, and don’t use the same iPad as the register for a second POS app. Android phones and tablets
+            keep the register running in the background, with a small notification to show it’s on.
+          </p>
+        </div>
+
+        {/* FAQ */}
+        <h2 className="font-display font-bold text-xl text-[#1F2937] mb-5">Common questions</h2>
+        <div className="divide-y divide-[#E5E7EB] border-y border-[#E5E7EB] mb-16">
+          {faq.map((f) => (
+            <details key={f.q} className="group py-5">
+              <summary className="cursor-pointer list-none flex justify-between items-center gap-4
+                                  font-display font-bold text-[#1F2937]">
+                {f.q}
+                <span className="text-[#1E3A5F] transition-transform group-open:rotate-45 text-xl">+</span>
+              </summary>
+              <p className="mt-3 text-[0.9rem] text-[#4B5563] leading-relaxed font-light">{f.a}</p>
+            </details>
           ))}
         </div>
 
         {/* Still need help */}
         <div className="bg-[#1E3A5F] rounded-2xl p-8 text-center text-white">
           <div className="text-3xl mb-3">💬</div>
-          <h2 className="font-display font-bold text-xl mb-2">Still need help?</h2>
+          <h2 className="font-display font-bold text-xl mb-2">Still stuck?</h2>
           <p className="text-white/70 text-sm font-light mb-6">
-            Our support team is available Mon–Fri 8am–6pm AEST. We reply within 2 hours.
+            Send us an email and a real person will reply.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="mailto:admin@ebizco.com.au"
-              className="inline-flex items-center gap-2 bg-[#F4A261] text-[#1A1A2E] font-bold
-                         px-6 py-3 rounded-xl hover:-translate-y-0.5 transition-all text-sm">
-              ✉️ Email Support
-            </a>
-            <a href="tel:+61412783132"
-              className="inline-flex items-center gap-2 bg-white/10 text-white font-medium
-                         px-6 py-3 rounded-xl border border-white/20 hover:bg-white/20
-                         transition-all text-sm">
-              📞 +61 412 783 132
-            </a>
-          </div>
+          <a href={`mailto:${CONTACT_EMAIL}`}
+            className="inline-flex items-center gap-2 bg-[#F4A261] text-[#1A1A2E] font-bold
+                       px-6 py-3 rounded-xl hover:-translate-y-0.5 transition-all text-sm">
+            ✉️ {CONTACT_EMAIL}
+          </a>
         </div>
 
       </div>

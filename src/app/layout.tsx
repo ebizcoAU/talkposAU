@@ -14,18 +14,23 @@ const syne = Syne({
   variable: '--font-syne',
 })
 
+// metadataBase stops Next from resolving og:image against localhost:3000.
+// The site is served at talkpos.com.au once DNS moves; set NEXT_PUBLIC_SITE_URL to preview elsewhere.
 export const metadata: Metadata = {
-  title: 'TalkPOS Australia — Run the Lunch Rush with One Person',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://talkpos.com.au'),
+  title: 'TalkPOS Australia — till, kitchen, stock and books in one app',
   description:
-    'QR ordering, voice takeaway, and ATO-ready compliance in one platform. The all-in-one POS that lets you run your café, pub or food truck single-handedly.',
+    'TalkPOS is the till for cafés and takeaways: orders straight to the kitchen, stock, staff PINs, and your sales and expenses with their GST in one place. Rosters, payroll and Xero and MYOB import/export are coming.',
   keywords: [
-    'pos australia', 'cafe pos', 'qr ordering', 'payid pos',
-    'ato compliant pos', 'voice ordering', 'hospitality software',
-    'solo operator cafe', 'food truck pos',
+    'pos australia', 'cafe pos', 'takeaway pos', 'kitchen display',
+    'self-order kiosk', 'restaurant stock', 'hospitality software',
   ],
   openGraph: {
-    title: 'TalkPOS Australia — Your cafe. Your rules. One operator.',
-    description: 'QR ordering, voice takeaway, ATO-ready compliance. From $39/month.',
+    title: 'TalkPOS Australia — your till, kitchen and books. One app.',
+    description: 'The till for cafés and takeaways. Join the Canberra pilot.',
+    siteName: 'TalkPOS Australia',
+    locale: 'en_AU',
+    type: 'website',
     images: [{ url: '/images/og-image.jpg' }],
   },
 }
