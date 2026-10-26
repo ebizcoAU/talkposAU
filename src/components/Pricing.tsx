@@ -29,7 +29,7 @@ export default function Pricing() {
             {pilot.button}: email admin@ebizco.com.au
           </a>
           <p className="text-[0.75rem] text-[#6B7280] mt-4">
-            See our <a href="/privacy/" className="underline hover:text-[#1E3A5F]">Privacy Policy</a>.
+            See our <a href="/privacy/" className="underline hover:text-[#1E3A5F]">privacy notice</a>.
           </p>
         </div>
 

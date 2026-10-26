@@ -24,7 +24,7 @@ src/
 │   ├── page.tsx        # home: Hero, HowItWorks, Features, BackOffice, Pricing, Faq, CtaBanner
 │   ├── help/           # setup steps + FAQ
 │   ├── contact/
-│   ├── privacy/  terms/   # legal pages
+│   ├── privacy/        # privacy notice
 └── components/
 ```
 

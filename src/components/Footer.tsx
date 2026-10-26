@@ -21,8 +21,8 @@ const cols = [
   {
     title: 'Legal',
     links: [
-      { label: 'Privacy Policy',   href: '/privacy/' },
-      { label: 'Terms of Service', href: '/terms/'   },
+      { label: 'Privacy',             href: '/privacy/' },
+      { label: 'Delete your account', href: 'https://ebizco.com.au/delete-account' },
     ],
   },
 ]
