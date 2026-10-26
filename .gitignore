@@ -17,3 +17,11 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+# any env file
+.env*
+!next-env.d.ts
+*.bak
+
+# internal notes — never commit (public repo)
+Agents.md
+Decisions*.md

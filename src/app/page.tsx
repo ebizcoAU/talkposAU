@@ -4,6 +4,7 @@ import Hero          from '@/components/Hero'
 import TheProblem    from '@/components/TheProblem'
 import HowItWorks    from '@/components/HowItWorks'
 import Features      from '@/components/Features'
+import KioskIVR      from '@/components/KioskIVR'
 import SoloOperator  from '@/components/SoloOperator'
 import VoiceSection  from '@/components/VoiceSection'
 import TrustedPOS    from '@/components/TrustedPOS'
@@ -30,8 +31,9 @@ export default function Home() {
         <TheProblem />
         <HowItWorks />
         <Features />
-        <SoloOperator />
+        <KioskIVR />
         <VoiceSection />
+        <SoloOperator />
         <TrustedPOS />
         <Accounting />
         <Payments />

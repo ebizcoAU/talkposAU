@@ -50,13 +50,13 @@ export default function Footer() {
               className="flex items-center gap-2 text-[0.75rem] text-[#4B5563] hover:text-[#1E3A5F] transition-colors">
               ✉️ admin@ebizco.com.au
             </a>
-            <a href="tel:+61412783132"
+            <a href="tel:+61412783123"
               className="flex items-center gap-2 text-[0.75rem] text-[#4B5563] hover:text-[#1E3A5F] transition-colors">
-              📞 +61 412 783 132
+              📞 +61 412 783 123
             </a>
-            <a href="https://zalo.me/84412783132" target="_blank" rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[0.75rem] text-[#4B5563] hover:text-[#1E3A5F] transition-colors">
-              💬 WhatsApp: +61 412 783 132
+            <a href="https://wa.me/61412783123?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20TalkPOS" target="_blank" rel="noopener noreferrer"
+              className="flex items-center gap-2 text-[0.75rem] text-[#4B5563] hover:text-[#25D366] transition-colors">
+              💬 WhatsApp: +61 412 783 123
             </a>
           </div>
           {/* Social links */}

@@ -2,10 +2,10 @@
 import Link from 'next/link'
 
 const stats = [
-  { num: '$30–35', suffix: '/hr', label: 'Avg casual wage' },
-  { num: '42',     suffix: '%',   label: 'Cafes on 1–2 staff' },
-  { num: '63',     suffix: '%',   label: 'Hurt by shortages' },
-  { num: '$39',    suffix: '/mo', label: 'Starting price' },
+  { num: '$4,000', suffix: '/mo', label: 'Replaced by TalkPOS' },
+  { num: '6',      suffix: ' apps', label: 'Replaced by one' },
+  { num: '$39',    suffix: '/mo',   label: 'Starting price' },
+  { num: '1',      suffix: ' day',  label: 'Setup time' },
 ]
 
 export default function Hero() {
@@ -52,17 +52,18 @@ export default function Hero() {
 
         <h1 className="font-display font-black text-[clamp(1.75rem,3.5vw,4.5rem)] leading-[1.1]
                        tracking-tight mb-5 text-white animate-fade-up-delay-1">
-          Your cafe.{' '}
-          <span className="text-[#F4A261]">Your rules.</span>
+          Replace{' '}
+          <span className="text-[#F4A261]">$4,000/month</span>
           <br />
-          <span className="text-[#F4A261]">One</span> operator.
+          of tools and staff.{' '}
+          <span className="text-[#F4A261]">One app.</span>
         </h1>
 
         <p className="text-white/80 text-[clamp(0.9rem,1.1vw,1.2rem)] leading-relaxed max-w-xl mb-8 font-light
                       animate-fade-up-delay-2">
-          The all-in-one platform that lets you run the lunch rush{' '}
-          <strong className="text-white font-semibold">single-handedly.</strong>{' '}
-          QR ordering, voice takeaway, and ATO-ready compliance.
+          TalkPOS combines{' '}
+          <strong className="text-white font-semibold">AI front desk, sales, accounting, tax, payroll and inventory</strong>{' '}
+          — voice-first, all in one app. Built for Australian small business.
         </p>
 
         {/* ── Row 1: Free Trial + See how it works ── */}
@@ -120,9 +121,9 @@ export default function Hero() {
         {/* ── Row 3: Trust badges ── */}
         <div className="flex flex-col gap-2">
           {[
-            'No lock-in contracts',
-            'ATO-ready from day one',
-            'Works offline in regional areas',
+            'No lock-in contracts — cancel anytime',
+            'ATO-ready: GST, BAS, STP payroll built in',
+            'Set up in one day — we configure everything',
           ].map((b) => (
             <div key={b} className="flex items-center gap-2 text-sm text-white/75 font-medium">
               <span className="w-2 h-2 bg-[#2E7D32] rounded-full flex-shrink-0" />
