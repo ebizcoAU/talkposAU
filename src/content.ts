@@ -13,7 +13,7 @@ export const books =
 export const pilot = {
   button: 'Join the Canberra pilot',
   lead: 'We’re starting with a small pilot in Canberra. Places are limited.',
-  note: 'Email us your name, venue and suburb. We’ll use them only to contact you about the TalkPOS pilot, and delete them once the pilot starts or after 12 months.',
+  note: 'Email us your name, venue and suburb. We’ll use them only to contact you about the TalkPOS pilot. If you don’t join, we delete your email when the places are filled, or within 12 months at the latest. If you join, the TalkPOS privacy notice covers you from then on.',
 }
 
 export type Item = { icon: string; title: string; body: string }
@@ -25,7 +25,7 @@ export const now: Item[] = [
   { icon: '🙋', title: 'Self-order kiosk', body: 'Customers can order for themselves on a tablet at the counter.' },
   { icon: '📱', title: 'Waiter tablet', body: 'Take orders at the table, with a view of your whole floor.' },
   { icon: '📦', title: 'Stock', body: 'Track stock, from raw materials to finished items, with stock counts and stock-in.' },
-  { icon: '🔐', title: 'Staff codes and PINs', body: 'Each staff member signs in with their own PIN on shared devices.' },
+  { icon: '🔐', title: 'Staff PINs', body: 'Staff sign in with a PIN on shared devices.' },
   { icon: '📒', title: 'Books in one place', body: books },
   { icon: '📶', title: 'Your devices, working together', body: 'Phones and tablets on your shop Wi-Fi pair with a QR code. Give each one a job: register, waiter, kiosk or kitchen.' },
 ]
@@ -34,9 +34,8 @@ export const now: Item[] = [
 export const coming: Item[] = [
   { icon: '🗓️', title: 'Rosters in TalkKim', body: 'Your staff see their shifts in the TalkKim app, and you and your team sort out changes and swaps with Kim’s help.' },
   { icon: '💵', title: 'Payroll and payslips', body: 'Pay runs with PAYG withholding and super worked out, and each staff member gets their payslip in TalkKim.' },
-  { icon: '🔁', title: 'Xero and MYOB import/export', body: 'Move your figures in and out of Xero and MYOB, so your accountant can keep using what they use.' },
-  // Wording to be confirmed before launch.
-  { icon: '🏛️', title: 'ATO', body: 'Coming: we’re registering as an ATO digital service provider.' },
+  { icon: '🔁', title: 'Xero and MYOB import/export', body: 'Export your sales and expenses to Xero or MYOB, and bring your figures across when you switch, so your accountant can keep using what they use.' },
+  { icon: '🏛️', title: 'ATO reporting', body: 'We’re working towards becoming an ATO digital service provider, so that later you can send your own reports to the ATO from TalkPOS. TalkPOS doesn’t connect to the ATO today.' },
 ]
 
 export type Faq = { q: string; a: string }

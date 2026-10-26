@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const setup = [
   { icon: '🍽️', title: 'Add your menu',     body: 'Type each dish and its price once, and choose which kitchen screen it goes to.' },
-  { icon: '👥', title: 'Add your staff',    body: 'Give each person a staff code and PIN, so everyone signs in as themselves.' },
+  { icon: '👥', title: 'Add your staff',    body: 'Add each staff member, so they can sign in with a PIN on shared devices.' },
   { icon: '📶', title: 'Pair your devices', body: 'On your shop Wi-Fi, scan the QR code to add a phone or tablet, then give it a job: register, waiter, kiosk or kitchen screen.' },
   { icon: '🧾', title: 'Start selling',     body: books },
 ]

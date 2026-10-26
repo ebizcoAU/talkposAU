@@ -1,7 +1,7 @@
 // src/components/BackOffice.tsx — the mini-ERP story: what runs today, what's coming
 import { now, coming } from '@/content'
 
-const today = ['The till', 'Stock', 'Staff codes and PINs', 'Books in one place']
+const today = ['The till', 'Stock', 'Staff PINs', 'Books in one place']
 
 export default function BackOffice() {
   const nowItems = now.filter((i) => today.includes(i.title))
