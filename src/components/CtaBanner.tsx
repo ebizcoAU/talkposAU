@@ -5,15 +5,8 @@ export default function CtaBanner() {
   return (
     <section className="relative section-pad text-center overflow-hidden bg-[#1A1A2E]">
 
-      {/* Background photo */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/images/cta-bg.jpg"
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover opacity-50"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1A1A2E]/20 via-[#1A1A2E]/25 to-[#1A1A2E]/35" />
-      </div>
+      {/* Plain brand background */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#1E3A5F] via-[#1A1A2E] to-[#1A1A2E]" />
 
       {/* Top amber accent line */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#F4A261] to-transparent" />

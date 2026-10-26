@@ -19,19 +19,12 @@ export default function Hero() {
     >
       {/* Background photo */}
       <div className="absolute inset-0 z-0">
-        {/* Desktop image — full bleed, subject at 40% */}
+        {/* Our own illustrative image: original file kept unedited, cropped by CSS only */}
         <img
-          src="/images/hero-bg.jpg"
-          alt="Australian café owner running the lunch rush"
-          className="absolute inset-0 w-full h-full object-cover opacity-40 hidden md:block"
-          style={{ objectPosition: '40% center' }}
-        />
-        {/* Mobile image — portrait crop, subject centred */}
-        <img
-          src="/images/hero-bg-mobile.jpg"
-          alt="Australian café owner"
-          className="absolute inset-0 w-full h-full object-cover opacity-60 block md:hidden"
-          style={{ objectPosition: 'center 30%' }}
+          src="/images/talkpos_food_counter.jpeg"
+          alt="Hands passing a takeaway coffee across a café counter, next to a tablet on a stand."
+          className="absolute inset-0 w-full h-full object-cover opacity-45"
+          style={{ objectPosition: '70% center' }}
         />
         {/* Left gradient — desktop only, mobile uses bottom gradient only */}
         <div className="absolute inset-y-0 left-0 bg-gradient-to-r from-[#1A1A2E]/95 via-[#1A1A2E]/40 to-transparent hidden md:block" style={{ width: '50%' }} />
@@ -41,6 +34,12 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#1A1A2E]/70 via-[#1A1A2E]/20 to-transparent md:hidden" style={{ height: '40%' }} />
         {/* Subtle amber top accent */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#F4A261] via-[#1E3A5F] to-transparent opacity-80" />
+      </div>
+
+      {/* The caption must stay visible on the image, not only in the alt text */}
+      <div className="absolute right-0 top-[72px] z-10 rounded-bl-xl bg-[#1A1A2E]/85 px-3 py-1.5
+                      text-xs font-bold text-white/90">
+        Illustrative image, AI-generated
       </div>
 
       {/* ── Content left ── */}
