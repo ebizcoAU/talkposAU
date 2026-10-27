@@ -20,7 +20,7 @@ export default function PrivacyPage() {
                          leading-tight text-[#1F2937] mb-3">
             Privacy: talkpos.com.au
           </h1>
-          <p className="text-[#6B7280] text-sm">Last updated: 26 October 2026</p>
+          <p className="text-[#6B7280] text-sm">Last updated: 28 October 2026</p>
         </div>
 
         <div className="space-y-6 text-[0.95rem] text-[#4B5563] leading-relaxed">
