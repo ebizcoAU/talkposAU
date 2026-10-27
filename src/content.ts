@@ -12,7 +12,7 @@ export const books =
 
 export const pilot = {
   button: 'Join the Canberra pilot',
-  lead: 'We’re starting with a small pilot in Canberra. Places are limited.',
+  lead: 'We’re starting with a small pilot in Canberra.',
   note: 'Email us your name, venue and suburb. We’ll use them only to contact you about the TalkPOS pilot. If you don’t join, we delete your email when the places are filled, or within 12 months at the latest. If you join, the TalkPOS privacy notice covers you from then on.',
 }
 
