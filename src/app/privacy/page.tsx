@@ -36,8 +36,8 @@ export default function PrivacyPage() {
           <p>
             <strong className="text-[#1F2937]">Pilot emails:</strong> if you email us about the Canberra pilot,
             we receive your name, venue, suburb and email address, and anything else you write. We use them only
-            to contact you about the pilot. If you don’t join, we delete your email when the places are filled,
-            or within 12 months at the latest. Our email is hosted by Google Workspace (Google LLC, United States).
+            to contact you about the pilot. If you don’t join, we delete your email when the pilot closes to new
+            venues, or within 12 months at the latest. Our email is hosted by Google Workspace (Google LLC, United States).
           </p>
           <p>
             <strong className="text-[#1F2937]">The TalkPOS app:</strong> if you use TalkPOS, your venue’s data is
