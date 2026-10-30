@@ -20,7 +20,7 @@ export default function PrivacyPage() {
                          leading-tight text-[#1F2937] mb-3">
             Privacy: talkpos.com.au
           </h1>
-          <p className="text-[#6B7280] text-sm">Last updated: 28 October 2026</p>
+          <p className="text-[#6B7280] text-sm">Last updated: 30 October 2026</p>
         </div>
 
         <div className="space-y-6 text-[0.95rem] text-[#4B5563] leading-relaxed">
@@ -31,7 +31,7 @@ export default function PrivacyPage() {
           <p>
             <strong className="text-[#1F2937]">This website:</strong> there are no accounts, no tracking or
             analytics cookies and no ads. Our web host records standard server logs (IP address, browser, page
-            and time) for security. Host: DigitalOcean, Singapore; logs are kept 14 days, then deleted.
+            and time) for security. Host: DigitalOcean, Sydney, Australia; logs are kept 14 days, then deleted.
           </p>
           <p>
             <strong className="text-[#1F2937]">Pilot emails:</strong> if you email us about the Canberra pilot,
